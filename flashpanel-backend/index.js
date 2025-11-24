@@ -5,6 +5,9 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
+const authRoute = require("./routes/auth");
+app.use("/api/auth", authRoute);
+
 // Test API route
 app.get("/", (req, res) => {
     res.send("FlashPanel Backend Running");
