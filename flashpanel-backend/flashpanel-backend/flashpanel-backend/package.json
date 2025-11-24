@@ -1,0 +1,14 @@
+{
+  "name": "flashpanel-backend",
+  "version": "1.0.0",
+  "description": "Backend API for FlashPanel hosting system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "darkplayzmc2-svg",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
