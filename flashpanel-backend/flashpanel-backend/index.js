@@ -1,20 +1,23 @@
-// FlashPanel backend starter API
-// Simple Express server
-
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 
-// Test route
+// Import Routes
+const authRoutes = require("./routes/auth");
+
+// Use Routes
+app.use("/api/auth", authRoutes);
+
+// Test Route
 app.get("/", (req, res) => {
-  res.json({
-    status: "FlashPanel backend running!",
-    version: "1.0.0"
-  });
+    res.send("FlashPanel Backend Running");
 });
 
-// Start server
-app.listen(3001, () => {
-  console.log("FlashPanel backend running on port 3001");
+// Start Server
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`FlashPanel backend running on port ${PORT}`);
 });
